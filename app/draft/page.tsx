@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { players } from "@/data/player"
+import { players } from "@/data/players"
 
 export default function DraftPage() {
 
