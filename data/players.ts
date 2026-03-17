@@ -1,52 +1,274 @@
-export const players = [
-{ slug:"roch-cholowsky", name:"Roch Cholowsky", position:"SS", age:20, school:"UCLA", talent:"Developing", photo:"roch-cholowsky.jpg"},
-{ slug:"grady-emerson", name:"Grady Emerson", position:"SS", age:18, school:"Fort Worth Christian", talent:"Raw", photo:"grady-emerson.jpg"},
-{ slug:"justin-lebron", name:"Justin Lebron", position:"SS", age:21, school:"Alabama", talent:"Advanced", photo:"justin-lebron.jpg"},
-{ slug:"jacob-lombard", name:"Jacob Lombard", position:"SS", age:18, school:"Gulliver Prep", talent:"Raw", photo:"jacob-lombard.jpg"},
-{ slug:"drew-burress", name:"Drew Burress", position:"OF", age:21, school:"Georgia Tech", talent:"Advanced", photo:"drew-burress.jpg"},
-{ slug:"derek-curiel", name:"Derek Curiel", position:"OF", age:20, school:"LSU", talent:"Developing", photo:"derek-curiel.jpg"},
-{ slug:"carson-bolemon", name:"Carson Bolemon", position:"LHP", age:18, school:"Southside Christian", talent:"Raw", photo:"carson-bolemon.jpg"},
-{ slug:"gio-rojas", name:"Gio Rojas", position:"LHP", age:18, school:"Stoneman Douglas", talent:"Raw", photo:"gio-rojas.jpg"},
-{ slug:"cameron-flukey", name:"Cameron Flukey", position:"RHP", age:20, school:"Coastal Carolina", talent:"Developing", photo:"cameron-flukey.jpg"},
-{ slug:"sawyer-strosnider", name:"Sawyer Strosnider", position:"OF", age:20, school:"TCU", talent:"Developing", photo:"sawyer-strosnider.jpg"},
-{ slug:"tyler-spangler", name:"Tyler Spangler", position:"SS", age:18, school:"De La Salle", talent:"Raw", photo:"tyler-spangler.jpg"},
-{ slug:"vahn-lackey", name:"Vahn Lackey", position:"C", age:20, school:"Georgia Tech", talent:"Developing", photo:"vahn-lackey.jpg"},
-{ slug:"liam-peterson", name:"Liam Peterson", position:"RHP", age:20, school:"Florida", talent:"Developing", photo:"liam-peterson.jpg"},
-{ slug:"jackson-flora", name:"Jackson Flora", position:"RHP", age:20, school:"UC Santa Barbara", talent:"Developing", photo:"jackson-flora.jpg"},
-{ slug:"aj-gracia", name:"A.J. Gracia", position:"OF", age:21, school:"Virginia", talent:"Advanced", photo:"aj-gracia.jpg"},
-{ slug:"chris-hacopian", name:"Chris Hacopian", position:"SS", age:21, school:"Texas A&M", talent:"Advanced", photo:"chris-hacopian.jpg"},
-{ slug:"logan-schmidt", name:"Logan Schmidt", position:"LHP", age:17, school:"Ganesha", talent:"Raw", photo:"logan-schmidt.jpg"},
-{ slug:"ace-reese", name:"Ace Reese", position:"3B", age:20, school:"Mississippi State", talent:"Developing", photo:"ace-reese.jpg"},
-{ slug:"rocco-maniscalco", name:"Rocco Maniscalco", position:"SS", age:16, school:"Oxford HS", talent:"Raw", photo:"rocco-maniscalco.jpg"},
-{ slug:"caden-sorrell", name:"Caden Sorrell", position:"OF", age:21, school:"Texas A&M", talent:"Advanced", photo:"caden-sorrell.jpg"},
-{ slug:"eric-becker", name:"Eric Becker", position:"SS", age:20, school:"Virginia", talent:"Developing", photo:"eric-becker.jpg"},
-{ slug:"tyler-bell", name:"Tyler Bell", position:"SS", age:20, school:"Kentucky", talent:"Developing", photo:"tyler-bell.jpg"},
-{ slug:"coleman-borthwick", name:"Coleman Borthwick", position:"RHP", age:17, school:"South Walton", talent:"Raw", photo:"coleman-borthwick.jpg"},
-{ slug:"gabe-gaeckle", name:"Gabe Gaeckle", position:"RHP", age:21, school:"Arkansas", talent:"Advanced", photo:"gabe-gaeckle.jpg"},
-{ slug:"chris-rembert", name:"Chris Rembert", position:"2B", age:20, school:"Auburn", talent:"Developing", photo:"chris-rembert.jpg"},
-{ slug:"gavin-grahovac", name:"Gavin Grahovac", position:"3B", age:21, school:"Texas A&M", talent:"Advanced", photo:"gavin-grahovac.jpg"},
-{ slug:"zion-rose", name:"Zion Rose", position:"OF", age:20, school:"Louisville", talent:"Developing", photo:"zion-rose.jpg"},
-{ slug:"eric-booth-jr", name:"Eric Booth Jr.", position:"OF", age:17, school:"Oak Grove", talent:"Raw", photo:"eric-booth-jr.jpg"},
-{ slug:"ryder-helfrick", name:"Ryder Helfrick", position:"C", age:21, school:"Arkansas", talent:"Advanced", photo:"ryder-helfrick.jpg"},
-{ slug:"jensen-hirschkorn", name:"Jensen Hirschkorn", position:"RHP", age:18, school:"Kingsburg", talent:"Raw", photo:"jensen-hirschkorn.jpg"},
-{ slug:"will-brick", name:"Will Brick", position:"C", age:17, school:"Christian Brothers", talent:"Raw", photo:"will-brick.jpg"},
-{ slug:"trevor-condon", name:"Trevor Condon", position:"OF", age:18, school:"Etowah", talent:"Raw", photo:"trevor-condon.jpg"},
-{ slug:"blake-bowen", name:"Blake Bowen", position:"OF", age:18, school:"JSerra Catholic", talent:"Raw", photo:"blake-bowen.jpg"},
-{ slug:"brady-harris", name:"Brady Harris", position:"OF", age:18, school:"Trinity Christian", talent:"Raw", photo:"brady-harris.jpg"},
-{ slug:"jarren-advincula", name:"Jarren Advincula", position:"2B", age:21, school:"Cal", talent:"Advanced", photo:"jarren-advincula.jpg"},
-{ slug:"aiden-ruiz", name:"Aiden Ruiz", position:"SS", age:18, school:"Texas HS", talent:"Raw", photo:"aiden-ruiz.jpg"},
-{ slug:"kaden-waechter", name:"Kaden Waechter", position:"RHP", age:18, school:"Jesuit", talent:"Raw", photo:"kaden-waechter.jpg"},
-{ slug:"hunter-dietz", name:"Hunter Dietz", position:"LHP", age:21, school:"Arkansas State", talent:"Advanced", photo:"hunter-dietz.jpg"},
-{ slug:"cole-carlon", name:"Cole Carlon", position:"LHP", age:20, school:"Arizona State", talent:"Developing", photo:"cole-carlon.jpg"},
-{ slug:"caden-bogenpohl", name:"Caden Bogenpohl", position:"OF", age:20, school:"St. Xavier", talent:"Developing", photo:"caden-bogenpohl.jpg"},
-{ slug:"beau-peterson", name:"Beau Peterson", position:"3B", age:18, school:"Florida HS", talent:"Raw", photo:"beau-peterson.jpg"},
-{ slug:"landon-thome", name:"Landon Thome", position:"2B/3B", age:18, school:"Ohio HS", talent:"Raw", photo:"landon-thome.jpg"},
-{ slug:"tegan-kuhns", name:"Tegan Kuhns", position:"RHP", age:20, school:"Tennessee", talent:"Developing", photo:"tegan-kuhns.jpg"},
-{ slug:"chase-brunson", name:"Chase Brunson", position:"OF", age:20, school:"TCU", talent:"Developing", photo:"chase-brunson.jpg"},
-{ slug:"shane-sdao", name:"Shane Sdao", position:"LHP", age:22, school:"Louisville", talent:"Elite", photo:"shane-sdao.jpg"},
-{ slug:"tre-broussard", name:"Tre Broussard", position:"OF", age:20, school:"Houston", talent:"Developing", photo:"tre-broussard.jpg"},
-{ slug:"joseph-contreras", name:"Joseph Contreras", position:"RHP", age:17, school:"Blessed Trinity", talent:"Raw", photo:"joseph-contreras.jpg"},
-{ slug:"jorvorskie-lane-jr", name:"Jorvorskie Lane Jr.", position:"OF", age:17, school:"Texas HS", talent:"Raw", photo:"jorvorskie-lane-jr.jpg"},
-{ slug:"maddox-molony", name:"Maddox Molony", position:"SS", age:21, school:"Oregon State", talent:"Advanced", photo:"maddox-molony.jpg"},
-{ slug:"denton-lord", name:"Denton Lord", position:"RHP", age:18, school:"Texas HS", talent:"Raw", photo:"denton-lord.jpg"}
+export type PlayerStats = {
+  year: number
+  team?: string
+  games?: number
+  avg?: number
+  hr?: number
+  rbi?: number
+  obp?: number
+  ops?: number
+  era?: number
+  whip?: number
+  strikeouts?: number
+}
+
+export type Player = {
+  rank: number
+  slug: string
+  name: string
+  team: string
+  age: number
+  position: string
+  school: string
+  talent: string
+
+  level?: "Draft" | "A" | "AA" | "AAA" | "MLB"
+  eta?: string
+
+  bats?: string
+  throws?: string
+  height?: string
+  weight?: string
+  bio?: string
+
+  stats?: PlayerStats[]
+}
+
+export const players: Player[] = [
+
+{
+rank:1,
+slug:"roch-cholowsky",
+name:"Roch Cholowsky",
+team:"Pirates",
+age:20,
+position:"SS",
+school:"UCLA",
+talent:"Elite",
+level:"Draft",
+eta:"2029",
+stats:[
+{year:2024,team:"UCLA",games:55,avg:.319,hr:12,rbi:58,obp:.404,ops:.928},
+{year:2023,team:"UCLA",games:50,avg:.295,hr:9,rbi:47,obp:.378,ops:.851}
+]
+},
+
+{
+rank:2,
+slug:"grady-emerson",
+name:"Grady Emerson",
+team:"Nationals",
+age:18,
+position:"SS",
+school:"Fort Worth Christian (TX)",
+talent:"Elite",
+level:"Draft"
+},
+
+{
+rank:3,
+slug:"justin-lebron",
+name:"Justin Lebron",
+team:"Rockies",
+age:21,
+position:"SS",
+school:"Alabama",
+talent:"Elite",
+level:"Draft"
+},
+
+{
+rank:4,
+slug:"jacob-lombard",
+name:"Jacob Lombard",
+team:"White Sox",
+age:18,
+position:"SS",
+school:"Gulliver Prep (FL)",
+talent:"Elite",
+level:"Draft"
+},
+
+{
+rank:5,
+slug:"drew-burress",
+name:"Drew Burress",
+team:"Athletics",
+age:21,
+position:"OF",
+school:"Georgia Tech",
+talent:"Elite",
+level:"Draft"
+},
+
+{
+rank:6,
+slug:"derek-curiel",
+name:"Derek Curiel",
+team:"Royals",
+age:20,
+position:"OF",
+school:"LSU",
+talent:"Elite",
+level:"Draft"
+},
+
+{
+rank:7,
+slug:"carson-bolemon",
+name:"Carson Bolemon",
+team:"Reds",
+age:18,
+position:"LHP",
+school:"Mississippi HS",
+talent:"Elite",
+level:"Draft"
+},
+
+{
+rank:8,
+slug:"gio-rojas",
+name:"Gio Rojas",
+team:"Giants",
+age:18,
+position:"LHP",
+school:"California HS",
+talent:"Elite",
+level:"Draft"
+},
+
+{
+rank:9,
+slug:"cameron-flukey",
+name:"Cameron Flukey",
+team:"Angels",
+age:20,
+position:"RHP",
+school:"Wake Forest",
+talent:"Elite",
+level:"Draft"
+},
+
+{
+rank:10,
+slug:"sawyer-strosnider",
+name:"Sawyer Strosnider",
+team:"Tigers",
+age:20,
+position:"OF",
+school:"TCU",
+talent:"Elite",
+level:"Draft"
+},
+
+{
+rank:11,
+slug:"tyler-spangler",
+name:"Tyler Spangler",
+team:"Cardinals",
+age:18,
+position:"SS",
+school:"Indiana HS",
+talent:"Elite"
+},
+
+{
+rank:12,
+slug:"vahn-lackey",
+name:"Vahn Lackey",
+team:"Mariners",
+age:20,
+position:"C",
+school:"Tennessee",
+talent:"Elite"
+},
+
+{
+rank:13,
+slug:"liam-peterson",
+name:"Liam Peterson",
+team:"Rays",
+age:20,
+position:"RHP",
+school:"Florida",
+talent:"Elite"
+},
+
+{
+rank:14,
+slug:"jackson-flora",
+name:"Jackson Flora",
+team:"Mets",
+age:20,
+position:"RHP",
+school:"LSU",
+talent:"Elite"
+},
+
+{
+rank:15,
+slug:"aj-gracia",
+name:"A.J. Gracia",
+team:"Red Sox",
+age:21,
+position:"OF",
+school:"Miami",
+talent:"Elite"
+},
+
+{
+rank:16,
+slug:"chris-hacopian",
+name:"Chris Hacopian",
+team:"Twins",
+age:21,
+position:"SS",
+school:"Maryland",
+talent:"Elite"
+},
+
+{
+rank:17,
+slug:"logan-schmidt",
+name:"Logan Schmidt",
+team:"Cubs",
+age:17,
+position:"LHP",
+school:"California HS",
+talent:"Elite"
+},
+
+{
+rank:18,
+slug:"ace-reese",
+name:"Ace Reese",
+team:"Diamondbacks",
+age:20,
+position:"3B",
+school:"Mississippi State",
+talent:"Elite"
+},
+
+{
+rank:19,
+slug:"rocco-maniscalco",
+name:"Rocco Maniscalco",
+team:"Marlins",
+age:16,
+position:"SS",
+school:"Florida HS",
+talent:"Elite"
+},
+
+{
+rank:20,
+slug:"caden-sorrell",
+name:"Caden Sorrell",
+team:"Blue Jays",
+age:21,
+position:"OF",
+school:"Texas",
+talent:"Elite"
+}
+
 ]
