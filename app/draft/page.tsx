@@ -2,11 +2,21 @@ import Link from "next/link"
 import { players } from "@/data/players"
 
 export default function DraftPage() {
+
+  const draftPlayers = [...players].sort((a, b) => a.rank - b.rank)
+
   return (
-    <div>
+    <div style={{ padding: "40px" }}>
+
       <h1>MLB Draft Tracker</h1>
 
-      <table>
+      <table
+        style={{
+          width: "100%",
+          borderCollapse: "collapse",
+          marginTop: "20px"
+        }}
+      >
         <thead>
           <tr>
             <th>Pick</th>
@@ -20,10 +30,14 @@ export default function DraftPage() {
         </thead>
 
         <tbody>
-          {players.map((player, index) => (
-            <tr key={player.slug}>
-              <td>{index + 1}</td>
-              <td>{player.team || "-"}</td>
+
+          {draftPlayers.map((player) => (
+
+            <tr key={player.slug} style={{ borderBottom: "1px solid #ddd" }}>
+
+              <td>{player.rank}</td>
+
+              <td>{player.team}</td>
 
               <td>
                 <Link href={`/player/${player.slug}`}>
@@ -32,13 +46,20 @@ export default function DraftPage() {
               </td>
 
               <td>{player.age}</td>
+
               <td>{player.position}</td>
+
               <td>{player.school}</td>
-              <td>{player.talent || "Elite"}</td>
+
+              <td>{player.talent}</td>
+
             </tr>
+
           ))}
+
         </tbody>
       </table>
+
     </div>
   )
 }
